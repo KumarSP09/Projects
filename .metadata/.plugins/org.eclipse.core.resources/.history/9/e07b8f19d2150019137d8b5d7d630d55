@@ -1,0 +1,9 @@
+package com.ksp.service;
+
+public interface IMasterServices <T> {
+
+	public void AddMstService(T data);
+	public void ModifyMstService(T data);
+	public void DeleteMStService(T data);
+	
+}

@@ -1,0 +1,27 @@
+1546967902831	Rename type 'PassengerMasterDao'
+1546967951568	Copy compilation units
+1546971309844	Delete element
+1546971381603	Copy compilation units
+1546971403969	Delete element
+1546971407798	Delete element
+1546971410013	Delete element
+1546971413048	Delete element
+1546971594838	Copy compilation unit
+1546971610412	Copy compilation units
+1546971615610	Delete elements
+1546971618688	Delete element
+1546971647049	Rename type 'FareMasterDao'
+1546971652456	Rename type 'PassengerMasterDao'
+1546971656620	Rename type 'RouteMasterDao'
+1546971660632	Rename type 'TransportMasterDao'
+1547230863226	Move compilation unit
+1547230883133	Rename type 'PassengerMasterService'
+1547232616414	Rename type 'IPassengerMaster'
+1547232632421	Rename type 'IRouteMaster'
+1547232644851	Rename type 'ITransportMaster'
+1547232663929	Rename type 'IFareMaster'
+1547233452360	Move compilation units
+1547233462328	Move compilation unit
+1547233873251	Rename type 'FareMasterService'
+1547233894681	Rename type 'RouteMasterService'
+1547233908563	Rename type 'TransportMasterService'

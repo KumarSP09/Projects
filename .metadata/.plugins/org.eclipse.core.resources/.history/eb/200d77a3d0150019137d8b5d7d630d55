@@ -1,0 +1,8 @@
+package com.ksp.service.impl;
+
+import com.ksp.dto.PassengerMasterDTO;
+import com.ksp.service.IPassengerMasterService;
+
+public class PassengerMasterServiceImpl implements IPassengerMasterService<PassengerMasterDTO> {
+
+}

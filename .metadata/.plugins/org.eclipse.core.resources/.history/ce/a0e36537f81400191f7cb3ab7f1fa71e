@@ -1,0 +1,10 @@
+package com.ksp.dao;
+
+public interface IMasterDoa <T> {
+
+	public int AddMaster(T Tdata);
+	public int ModifyMaster(T Tdata);
+	public void DeleteMaster(String Code);
+	public void display();
+
+}

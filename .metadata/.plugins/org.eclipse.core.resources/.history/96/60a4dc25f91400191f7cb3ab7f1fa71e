@@ -1,0 +1,26 @@
+package com.ksp.dao.impl;
+
+import com.ksp.dao.IMasterDoa;
+import com.ksp.dto.TransportMasterDTO;
+
+public class TransportMasterDaoImpl implements IMasterDoa<TransportMasterDTO> {
+
+	@Override
+	public int AddMaster(TransportMasterDTO Tdata) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int ModifyMaster(TransportMasterDTO Tdata) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void DeleteMaster(String Code) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

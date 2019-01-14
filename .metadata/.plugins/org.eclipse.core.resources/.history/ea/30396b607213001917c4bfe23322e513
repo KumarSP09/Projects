@@ -1,0 +1,7 @@
+package com.ksp.dao;
+
+public interface IMasterDoa <T> {
+
+	public void AddMaster();
+	
+}

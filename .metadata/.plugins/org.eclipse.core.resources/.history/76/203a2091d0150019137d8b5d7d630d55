@@ -1,0 +1,7 @@
+package com.ksp.service.impl;
+
+import com.ksp.service.IPassengerMasterService;
+
+public class PassengerMasterServiceImpl implements IPassengerMasterService {
+
+}

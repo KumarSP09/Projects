@@ -1,0 +1,15 @@
+package com.ksp.dto;
+
+public class TransportMasterDTO {
+	
+	String TransporterCode;	
+	String TransportMode;	
+	String TransportType;	
+	String TransportVechicle;	
+	int MaxCapacity;	
+	int AvailableCapacity;	
+	int NoOfDrivers;	
+	int NoOfSupportingStaffs;
+
+
+}

@@ -1,0 +1,26 @@
+package com.ksp.service.impl;
+
+import com.ksp.dto.RouteMasterDTO;
+import com.ksp.service.IRouteMasterService;
+
+public class RouteMasterServiceImpl implements IRouteMasterService <RouteMasterDTO> {
+
+	@Override
+	public void AddMstService(RouteMasterDTO data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ModifyMstService(RouteMasterDTO data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void DeleteMStService(String code) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

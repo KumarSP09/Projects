@@ -1,0 +1,9 @@
+package com.ksp.util;
+
+import java.sql.Connection;
+
+public class DBConnection {
+
+	static Connection conn = null;
+	
+}

@@ -1,0 +1,5 @@
+package com.ksp.dao;
+
+public interface IPassengerMaster<T> extends IMasterDoa<T> {
+
+}

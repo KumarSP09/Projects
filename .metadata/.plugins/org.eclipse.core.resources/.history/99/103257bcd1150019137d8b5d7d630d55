@@ -1,0 +1,8 @@
+package com.ksp.dao;
+
+import java.util.List;
+
+public interface IPassengerMaster<T> extends IMasterDoa<T> {
+
+	public List<T> getPassengersInfo(String passenger_code);
+}

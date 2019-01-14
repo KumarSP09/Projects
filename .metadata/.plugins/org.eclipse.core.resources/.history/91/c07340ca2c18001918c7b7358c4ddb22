@@ -1,0 +1,42 @@
+package com.ksp.controller;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+import com.ksp.dto.PassengerMasterDTO;
+import com.ksp.service.impl.PassengerMasterServiceImpl;
+
+public class PassengerController {
+
+	public static void main(String[] args)
+	{
+		boolean IsExit = false;
+		String choice = null;
+		Scanner scan = new Scanner(System.in);
+		
+		PassengerMasterServiceImpl passengers = new PassengerMasterServiceImpl();
+		PassengerMasterDTO PassengerDataObj = new PassengerMasterDTO();
+		
+		do {
+			System.out.println("Enter your choice : add/update/delete...");
+			switch (choice)
+			{
+			case "add" :
+				PassengerDataObj.setPassenger_Code(passenger_Code);
+				PassengerDataObj.setPassenger_Name(passenger_Name);
+				PassengerDataObj.setPassenger_Age(passenger_Age);
+				PassengerDataObj.setPassenger_Gender(passenger_Gender);
+				PassengerDataObj.setPassenger_Contact_Mail(passenger_Contact_Mail);
+				PassengerDataObj.setPassenger_Contact_Number(passenger_Contact_Number);
+				
+				passengers.AddMstService(dataObj);
+				
+			
+			}
+		}while(!IsExit);
+		
+		
+	}
+	
+	
+}

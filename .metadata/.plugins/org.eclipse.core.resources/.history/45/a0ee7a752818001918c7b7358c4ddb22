@@ -1,0 +1,11 @@
+package com.ksp.controller;
+
+public class PassengerController {
+
+	public static void main(String[] args)
+	{
+		
+	}
+	
+	
+}

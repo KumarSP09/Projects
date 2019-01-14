@@ -1,0 +1,11 @@
+package com.ksp.dto;
+
+public class PassengerMasterDTO {
+
+	String Passenger_Code;	
+	String Passenger_Name;
+	int Passenger_Age;	
+	String Passenger_Gender; 
+	String Passenger_Contact_Number; 
+	String Passenger_Contact_Mail;
+}

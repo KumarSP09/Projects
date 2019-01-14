@@ -1,0 +1,12 @@
+package com.ksp.dto;
+
+public class RouteMasterDTO {
+	
+	String RouteCode;
+	String Source;
+	String Destination;
+	int DistancesInKM;
+	String RouteType;
+	int TravelTimeInHrs;
+	
+}

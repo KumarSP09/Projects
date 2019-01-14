@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Driver"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IFareMaster"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IRouteMaster"/>
+<fullyQualifiedTypeName name="com.ksp.dao.ITransportMaster"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.ksp.util.DBConnection"/>
+<fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.ksp.service.IPassengerMasterService"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IMasterDoa"/>
+<fullyQualifiedTypeName name="com.ksp.dto.PassengerMasterDTO"/>
+<fullyQualifiedTypeName name="com.ksp.dao.impl.PassengerMasterDaoImpl"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IPassengerMaster"/>
+<fullyQualifiedTypeName name="com.ksp.service.IMasterServices"/>
+<fullyQualifiedTypeName name="com.ksp.service.ITransportMasterService"/>
+<fullyQualifiedTypeName name="com.ksp.service.IRouteMasterService"/>
+<fullyQualifiedTypeName name="com.ksp.service.IFareMasterService"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IFareMasterDao"/>
+<fullyQualifiedTypeName name="com.ksp.dto.FareMasterDTO"/>
+<fullyQualifiedTypeName name="com.ksp.dao.impl.FareMasterDaoImpl"/>
+<fullyQualifiedTypeName name="com.ksp.dao.IRouteMasterDao"/>
+<fullyQualifiedTypeName name="com.ksp.dto.RouteMasterDTO"/>
+<fullyQualifiedTypeName name="com.ksp.dao.impl.RouteMasterDaoImpl"/>
+<fullyQualifiedTypeName name="com.ksp.dao.ITransportMasterDao"/>
+<fullyQualifiedTypeName name="com.ksp.dto.TransportMasterDTO"/>
+<fullyQualifiedTypeName name="com.ksp.dao.impl.TransportMasterDaoImpl"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,7 @@
+package com.ksp.service;
+
+import com.ksp.service.IMasterServices;
+
+public interface IPassengerMasterService<T> extends IMasterServices<T> {
+
+}

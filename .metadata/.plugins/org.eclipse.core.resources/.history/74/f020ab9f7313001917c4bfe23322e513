@@ -1,0 +1,10 @@
+package com.ksp.dto;
+
+public class FareMasterDTO {
+	String FareCode;	
+	TransportCode	
+	RouteCode	
+	FareValue	
+	Discounts
+
+}

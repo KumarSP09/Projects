@@ -1,0 +1,21 @@
+package com.ksp.controller;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+public class PassengerController {
+
+	public static void main(String[] args)
+	{
+		boolean IsExit;
+		Scanner scan = new Scanner(System.in);
+		
+		do {
+			
+		}while(!IsExit)
+		
+		
+	}
+	
+	
+}

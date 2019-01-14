@@ -1,0 +1,8 @@
+package com.ksp.dto;
+
+public class RouteMasterDTO {
+	
+	String Route_Code;
+	String Source;
+
+}

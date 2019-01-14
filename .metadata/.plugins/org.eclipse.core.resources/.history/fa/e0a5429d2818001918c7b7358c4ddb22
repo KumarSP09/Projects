@@ -1,0 +1,15 @@
+package com.ksp.controller;
+
+import java.util.Scanner;
+
+public class PassengerController {
+
+	public static void main(String[] args)
+	{
+		
+		Scanner scan = new Scanner();
+		
+	}
+	
+	
+}

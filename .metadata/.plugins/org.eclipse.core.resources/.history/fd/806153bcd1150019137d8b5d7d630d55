@@ -1,0 +1,35 @@
+package com.ksp.service.impl;
+
+import com.ksp.dao.IMasterDoa;
+import com.ksp.dao.IPassengerMaster;
+import com.ksp.dao.impl.PassengerMasterDaoImpl;
+import com.ksp.dto.PassengerMasterDTO;
+import com.ksp.service.IPassengerMasterService;
+
+public class PassengerMasterServiceImpl implements IPassengerMasterService<PassengerMasterDTO> {
+
+	IPassengerMaster<PassengerMasterDTO> passengers = new PassengerMasterDaoImpl();
+	
+	@Override
+	public void AddMstService(PassengerMasterDTO data) {
+		// TODO Auto-generated method stub
+		
+		passengers.AddMaster(data);
+		
+	}
+
+	@Override
+	public void ModifyMstService(PassengerMasterDTO data) {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+
+	@Override
+	public void DeleteMStService(PassengerMasterDTO data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

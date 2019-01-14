@@ -1,0 +1,5 @@
+package com.ksp.dao.impl;
+
+public class FareMasterDao {
+
+}

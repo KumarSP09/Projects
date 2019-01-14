@@ -1,0 +1,26 @@
+package com.ksp.dao.impl;
+
+import com.ksp.dao.IMasterDoa;
+import com.ksp.dto.RouteMasterDTO;
+
+public class RouteMasterDaoImpl implements IMasterDoa<RouteMasterDTO>{
+
+	@Override
+	public int AddMaster(RouteMasterDTO Tdata) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int ModifyMaster(RouteMasterDTO Tdata) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void DeleteMaster(String Code) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,73 @@
+package com.ksp.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.ksp.dao.IPassengerMaster;
+import com.ksp.dto.PassengerMasterDTO;
+import com.ksp.util.DBConnection;
+import com.mysql.cj.protocol.Resultset;
+
+public class PassengerMasterDaoImpl implements IPassengerMaster<PassengerMasterDTO> {
+
+	Connection conn;
+	PreparedStatement pstmt;
+	Resultset rs;
+	private StringBuilder strsql = new StringBuilder();
+	
+	@Override
+	public int AddMaster(PassengerMasterDTO passengers) {
+		
+		strsql = null;
+		int rowIndex=1;
+			
+		strsql.append("INSERT INTO passengermaster\r\n" + 
+				"(	Passenger_Code,\r\n" + 
+				"	Passenger_Name,\r\n" + 
+				"	Passenger_Age,\r\n" + 
+				"	Passenger_Gender,\r\n" + 
+				"	Passenger_Contact_Number,\r\n" + 
+				"	Passenger_Contact_Mail)\r\n" + 
+				"VALUES\r\n" + 
+				"(	?,\r\n" + 
+				"	?,\r\n" + 
+				"	?,\r\n" + 
+				"	?,\r\n" + 
+				"	?,\r\n" + 
+				"	?\r\n" + 
+				")\r\n" + 
+				"");
+		conn = DBConnection.getConnection();
+		
+		try {
+			pstmt = conn.prepareStatement(strsql.toString());
+			pstmt.clearParameters();
+			pstmt.setString(rowIndex++, passengers.getPassenger_Code());
+			pstmt.setString(rowIndex++, passengers.getPassenger_Name());
+			pstmt.setInt(rowIndex++, passengers.getPassenger_Age());
+			pstmt.setString(rowIndex++, passengers.getPassenger_Code());
+			pstmt.setString(rowIndex++, passengers.getPassenger_Code());
+			pstmt.setString(rowIndex++, passengers.getPassenger_Code());
+			rs = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+		return 0;
+	}
+
+	@Override
+	public int ModifyMaster(PassengerMasterDTO passengers) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void DeleteMaster(String Code) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
