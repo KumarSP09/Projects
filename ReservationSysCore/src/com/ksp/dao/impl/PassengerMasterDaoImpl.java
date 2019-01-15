@@ -17,13 +17,13 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 	PreparedStatement pstmt;
 	ResultSet rs;
 	int results =0;
-	private StringBuilder strsql = new StringBuilder();
+	private StringBuilder strsql;
 	
 	@Override
 	public int AddMaster(PassengerMasterDTO passengers) {
 		
-		
-		int rowIndex=1;
+		strsql = new StringBuilder();
+		int paramIndex=1;
 			
 		strsql.append("INSERT INTO passengermaster\r\n" + 
 				"(	Passenger_Code,\r\n" + 
@@ -44,69 +44,128 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 		conn = DBConnection.getConnection();
 		
 		try {
-			System.out.println("DAO "+passengers.getPassenger_Code());
+			System.out.println("DAO "+passengers.getPassengerCode());
 			pstmt = conn.prepareStatement(strsql.toString());
 			pstmt.clearParameters();
-			pstmt.setString(rowIndex++, passengers.getPassenger_Code());
-			pstmt.setString(rowIndex++, passengers.getPassenger_Name());
-			pstmt.setInt(rowIndex++, passengers.getPassenger_Age());
-			pstmt.setString(rowIndex++, passengers.getPassenger_Gender());
-			pstmt.setString(rowIndex++, passengers.getPassenger_Contact_Number());
-			pstmt.setString(rowIndex++, passengers.getPassenger_Contact_Mail());
+			pstmt.setString(paramIndex++, passengers.getPassengerCode());
+			pstmt.setString(paramIndex++, passengers.getPassengerName());
+			pstmt.setInt(paramIndex++, passengers.getPassengerAge());
+			pstmt.setString(paramIndex++, passengers.getPassengerGender());
+			pstmt.setString(paramIndex++, passengers.getPassengerContactNumber());
+			pstmt.setString(paramIndex++, passengers.getPassengerContactMail());
 			results = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	
-		return 0;
+		return 1;
 	}
 
 	@Override
 	public int ModifyMaster(PassengerMasterDTO passengers) {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO Auto-generated method stub\
+		strsql = new StringBuilder();
+		int paramIndex=1;
+		strsql.append("UPDATE passengermaster \r\n" + 
+				"SET\r\n" + 
+				" Passenger_Name  =?,\r\n" + 
+				" Passenger_Age  =?,\r\n" + 
+				" Passenger_Gender  = ?,\r\n" + 
+				" Passenger_Contact_Number  = ?,\r\n" + 
+				" Passenger_Contact_Mail  = ?\r\n" + 
+				"WHERE  Passenger_Code  = ?");
+		
+		conn = DBConnection.getConnection();
+		
+		try {
+			pstmt = conn.prepareStatement(strsql.toString());
+			pstmt.clearParameters();
+			pstmt.setString(paramIndex++, passengers.getPassengerName());
+			pstmt.setInt(paramIndex++, passengers.getPassengerAge());
+			pstmt.setString(paramIndex++,passengers.getPassengerGender());
+			pstmt.setString(paramIndex++,passengers.getPassengerContactNumber());
+			pstmt.setString(paramIndex++,passengers.getPassengerContactMail());
+			pstmt.setString(paramIndex++, passengers.getPassengerCode());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return 1;
 	}
 
 	@Override
 	public void DeleteMaster(String Code) {
 		// TODO Auto-generated method stub
+		int paramIndex=1;
+		strsql = new StringBuilder();
+		
+		strsql.append("DELETE FROM passengermaster WHERE passenger_code = ?");
+		
+		conn = DBConnection.getConnection();
+		
+		try {
+			pstmt = conn.prepareStatement(strsql.toString());
+			pstmt.clearParameters();
+			pstmt.setString(paramIndex, Code);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 
+/*	@Override
+	public List<PassengerMasterDTO> getInfo(String code) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
 	@Override
-	public List<PassengerMasterDTO> getPassengersInfo(String passenger_code) {
+	public List<PassengerMasterDTO> getInfo(String passengerCode) {
 		// TODO Auto-generated method stub
 	
 		pstmt=null;
-		strsql=null;
+		strsql = new StringBuilder();;
 		int paramIndex =1;
 		
 		List<PassengerMasterDTO> PassengerList = new ArrayList<PassengerMasterDTO>();
-		PassengerMasterDTO passengers = new PassengerMasterDTO();
+		PassengerMasterDTO passengers;
 		
 		strsql.append(  "SELECT  Passenger_Code ,  Passenger_Name ,  Passenger_Age ,  Passenger_Gender ,  \r\n" + 
 						"		Passenger_Contact_Number ,  Passenger_Contact_Mail  \r\n" + 
-						"FROM  passengermaster\r\n" + 
-						"WHERE Passenger_Code = ?\r\n" + 
-						"");
+						"FROM  passengermaster\r\n" );
+		
+		
 		try {
 				conn = DBConnection.getConnection();
 				pstmt = conn.prepareStatement(strsql.toString());
 				pstmt.clearParameters();
-				pstmt.setString(paramIndex, passenger_code);
+				if (!"(ALL)".equals(passengerCode)) 
+				{
+					strsql.append( "WHERE Passenger_Code = ?");
+					pstmt.setString(paramIndex, passengerCode);
+				}
+				
 				rs = pstmt.executeQuery();
 				while (rs.next())
 				{
-					passengers.setPassenger_Code(rs.getString("Passenger_code"));
-					passengers.setPassenger_Name(rs.getString("Passenger_Name"));
-					passengers.setPassenger_Age(rs.getInt("Passenger_Age"));
-					passengers.setPassenger_Gender(rs.getString("Passenger_Gender"));
-					passengers.setPassenger_Contact_Mail(rs.getString("Passenger_Contact_Mail"));
-					passengers.setPassenger_Contact_Number(rs.getString("Passenger_Contact_Number"));
+					passengers = new PassengerMasterDTO();
+					passengers.setPassengerCode(rs.getString("Passenger_code"));
+					passengers.setPassengerName(rs.getString("Passenger_Name"));
+					passengers.setPassengerAge(rs.getInt("Passenger_Age"));
+					passengers.setPassengerGender(rs.getString("Passenger_Gender"));
+					passengers.setPassengerContactMail(rs.getString("Passenger_Contact_Mail"));
+					passengers.setPassengerContactNumber(rs.getString("Passenger_Contact_Number"));
+					
+					PassengerList.add(passengers);
 				}
 				
-				PassengerList.add(passengers);
+				
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

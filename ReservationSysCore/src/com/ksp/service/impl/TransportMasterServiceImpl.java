@@ -28,4 +28,10 @@ public class TransportMasterServiceImpl implements ITransportMasterService<Trans
 		
 	}
 
+	@Override
+	public void getInfo(String code) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

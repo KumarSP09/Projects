@@ -24,40 +24,79 @@ public class PassengerController {
 		PassengerMasterDTO PassengerDataObj = new PassengerMasterDTO();
 		
 		do {
-			System.out.println("Enter your choice : add/update/delete/exit...");
+			System.out.println("Enter your choice : add/update/delete/show/exit...");
 			choice = scan.nextLine();
 			switch (choice)
 			{
 			case "add" :
 				System.out.println("Enter Passenger Code");
 				passengerCode = scan.nextLine();
-				PassengerDataObj.setPassenger_Code(passengerCode);
+				PassengerDataObj.setPassengerCode(passengerCode);
 				
 				System.out.println("Enter Passenger Name");
 				passengerName = scan.nextLine();
-				PassengerDataObj.setPassenger_Name(passengerName);	
+				PassengerDataObj.setPassengerName(passengerName);	
 				System.out.println("Enter Passenger Age");
 				passengerAge = scan.nextInt();
-				PassengerDataObj.setPassenger_Age(passengerAge);
+				PassengerDataObj.setPassengerAge(passengerAge);
 				
 				System.out.println("Enter Passenger Gender");
 				scan.nextLine();
 				passengerGender = scan.nextLine();
-				PassengerDataObj.setPassenger_Gender(passengerGender);	
+				PassengerDataObj.setPassengerGender(passengerGender);	
 				
 				
 				System.out.println("Enter Passenger Mail");
 				passengerContact_Mail = scan.nextLine();
-				PassengerDataObj.setPassenger_Contact_Mail(passengerContact_Mail);	
+				PassengerDataObj.setPassengerContactMail(passengerContact_Mail);	
 				
 				System.out.println("Enter Passenger Mobile");
 				passengerContact_Number = scan.nextLine();
-				PassengerDataObj.setPassenger_Contact_Number(passengerContact_Number);
+				PassengerDataObj.setPassengerContactNumber(passengerContact_Number);
 				
 				passengers.AddMstService(PassengerDataObj);
 				break;
+			case "update":
+				System.out.println("Enter Passenger Code");
+				passengerCode = scan.nextLine();
+				PassengerDataObj.setPassengerCode(passengerCode);
+				
+				System.out.println("Enter Passenger Name");
+				passengerName = scan.nextLine();
+				PassengerDataObj.setPassengerName(passengerName);	
+				System.out.println("Enter Passenger Age");
+				passengerAge = scan.nextInt();
+				PassengerDataObj.setPassengerAge(passengerAge);
+				
+				System.out.println("Enter Passenger Gender");
+				scan.nextLine();
+				passengerGender = scan.nextLine();
+				PassengerDataObj.setPassengerGender(passengerGender);	
+				
+				
+				System.out.println("Enter Passenger Mail");
+				passengerContact_Mail = scan.nextLine();
+				PassengerDataObj.setPassengerContactMail(passengerContact_Mail);	
+				
+				System.out.println("Enter Passenger Mobile");
+				passengerContact_Number = scan.nextLine();
+				PassengerDataObj.setPassengerContactNumber(passengerContact_Number);
+				
+				passengers.ModifyMstService(PassengerDataObj);
+				break;
+			case "delete":
+				System.out.println("Enter Passenger Code");
+				passengerCode = scan.nextLine();
+				passengers.DeleteMStService(passengerCode);
+				break;
+			case "show":
+				System.out.println("Enter Passenger Code");
+				passengerCode = scan.nextLine();
+				passengers.getInfo(passengerCode);
+				break;
 			case "exit" :
 				IsExit= true;
+				break;
 			
 			}
 		}while(!IsExit);

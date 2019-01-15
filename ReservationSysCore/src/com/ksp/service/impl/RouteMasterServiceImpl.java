@@ -30,4 +30,10 @@ public class RouteMasterServiceImpl implements IRouteMasterService <RouteMasterD
 		route.DeleteMaster(code);
 	}
 
+	@Override
+	public void getInfo(String code) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -30,4 +30,10 @@ public class FareMasterServiceImpl implements IFareMasterService<FareMasterDTO>{
 		fares.DeleteMaster(code);
 	}
 
+	@Override
+	public void getInfo(String code) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

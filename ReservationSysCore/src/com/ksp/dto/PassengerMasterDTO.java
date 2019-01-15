@@ -2,48 +2,48 @@ package com.ksp.dto;
 
 public class PassengerMasterDTO {
 
-	String Passenger_Code;	
-	String Passenger_Name;
-	int Passenger_Age;	
-	String Passenger_Gender; 
-	String Passenger_Contact_Number; 
-	String Passenger_Contact_Mail;
+	String PassengerCode;	
+	String PassengerName;
+	int PassengerAge;	
+	String PassengerGender; 
+	String PassengerContactNumber; 
+	String PassengerContactMail;
 	
-	public String getPassenger_Code() {
-		return Passenger_Code;
+	public String getPassengerCode() {
+		return PassengerCode;
 	}
-	public void setPassenger_Code(String passenger_Code) {
-		Passenger_Code = passenger_Code;
+	public void setPassengerCode(String passengerCode) {
+		PassengerCode = passengerCode;
 	}
-	public String getPassenger_Name() {
-		return Passenger_Name;
+	public String getPassengerName() {
+		return PassengerName;
 	}
-	public void setPassenger_Name(String passenger_Name) {
-		Passenger_Name = passenger_Name;
+	public void setPassengerName(String passengerName) {
+		PassengerName = passengerName;
 	}
-	public int getPassenger_Age() {
-		return Passenger_Age;
+	public int getPassengerAge() {
+		return PassengerAge;
 	}
-	public void setPassenger_Age(int passenger_Age) {
-		Passenger_Age = passenger_Age;
+	public void setPassengerAge(int passengerAge) {
+		PassengerAge = passengerAge;
 	}
-	public String getPassenger_Gender() {
-		return Passenger_Gender;
+	public String getPassengerGender() {
+		return PassengerGender;
 	}
-	public void setPassenger_Gender(String passenger_Gender) {
-		Passenger_Gender = passenger_Gender;
+	public void setPassengerGender(String passengerGender) {
+		PassengerGender = passengerGender;
 	}
-	public String getPassenger_Contact_Number() {
-		return Passenger_Contact_Number;
+	public String getPassengerContactNumber() {
+		return PassengerContactNumber;
 	}
-	public void setPassenger_Contact_Number(String passenger_Contact_Number) {
-		Passenger_Contact_Number = passenger_Contact_Number;
+	public void setPassengerContactNumber(String passengerContactNumber) {
+		PassengerContactNumber = passengerContactNumber;
 	}
-	public String getPassenger_Contact_Mail() {
-		return Passenger_Contact_Mail;
+	public String getPassengerContactMail() {
+		return PassengerContactMail;
 	}
-	public void setPassenger_Contact_Mail(String passenger_Contact_Mail) {
-		Passenger_Contact_Mail = passenger_Contact_Mail;
+	public void setPassengerContactMail(String passengerContactMail) {
+		PassengerContactMail = passengerContactMail;
 	}
 	
 	

@@ -1,5 +1,7 @@
 package com.ksp.dao.impl;
 
+import java.util.List;
+
 import com.ksp.dao.ITransportMasterDao;
 import com.ksp.dto.TransportMasterDTO;
 
@@ -21,6 +23,12 @@ public class TransportMasterDaoImpl implements ITransportMasterDao<TransportMast
 	public void DeleteMaster(String Code) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<TransportMasterDTO> getInfo(String code) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
