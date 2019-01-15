@@ -22,7 +22,7 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 	@Override
 	public int AddMaster(PassengerMasterDTO passengers) {
 		
-		strsql = null;
+		
 		int rowIndex=1;
 			
 		strsql.append("INSERT INTO passengermaster\r\n" + 
@@ -44,6 +44,7 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 		conn = DBConnection.getConnection();
 		
 		try {
+			System.out.println("DAO "+passengers.getPassenger_Code());
 			pstmt = conn.prepareStatement(strsql.toString());
 			pstmt.clearParameters();
 			pstmt.setString(rowIndex++, passengers.getPassenger_Code());

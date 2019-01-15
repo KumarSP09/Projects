@@ -41,8 +41,10 @@ public class PassengerController {
 				PassengerDataObj.setPassenger_Age(passengerAge);
 				
 				System.out.println("Enter Passenger Gender");
+				scan.nextLine();
 				passengerGender = scan.nextLine();
-				PassengerDataObj.setPassenger_Gender(passengerGender);		
+				PassengerDataObj.setPassenger_Gender(passengerGender);	
+				
 				
 				System.out.println("Enter Passenger Mail");
 				passengerContact_Mail = scan.nextLine();
