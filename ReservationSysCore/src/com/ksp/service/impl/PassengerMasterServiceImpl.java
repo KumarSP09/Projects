@@ -13,31 +13,30 @@ public class PassengerMasterServiceImpl implements IPassengerMasterService<Passe
 	IPassengerMasterDao<PassengerMasterDTO> passengers = new PassengerMasterDaoImpl();
 	
 	@Override
-	public void AddMstService(PassengerMasterDTO dataObj) {
+	public int AddMstService(PassengerMasterDTO dataObj) {
 		// TODO Auto-generated method stub
 		
-		passengers.AddMaster(dataObj);
+		return passengers.AddMaster(dataObj);
 		
 	}
 
 	@Override
-	public void ModifyMstService(PassengerMasterDTO dataObj) {
+	public int ModifyMstService(PassengerMasterDTO dataObj) {
 		// TODO Auto-generated method stub
 		
-		passengers.ModifyMaster(dataObj);
+		return passengers.ModifyMaster(dataObj);
 		
 	}
 
 
 	@Override
-	public void DeleteMStService(String code) {
-		// TODO Auto-generated method stub
-		passengers.DeleteMaster(code);
+	public int DeleteMStService(String code) {
+		return passengers.DeleteMaster(code);
 		
 	}
 
 	@Override
-	public void getInfo(String code) {
+	public List<PassengerMasterDTO> getInfo(String code) {
 		// TODO Auto-generated method stub
 		List<PassengerMasterDTO> passengersList = new ArrayList<>(); 
 		passengersList = passengers.getInfo(code);
@@ -48,7 +47,8 @@ public class PassengerMasterServiceImpl implements IPassengerMasterService<Passe
 					passengerMaster.getPassengerAge() + " "+passengerMaster.getPassengerGender()+ " "+ 
 					passengerMaster.getPassengerContactMail()+ " "+ passengerMaster.getPassengerContactNumber());
 			
-		}	
+		}
+		return passengersList;	
 	}
 
 	

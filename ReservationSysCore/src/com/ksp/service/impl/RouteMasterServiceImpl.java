@@ -1,5 +1,7 @@
 package com.ksp.service.impl;
 
+import java.util.List;
+
 import com.ksp.dao.IRouteMasterDao;
 import com.ksp.dao.impl.RouteMasterDaoImpl;
 import com.ksp.dto.RouteMasterDTO;
@@ -10,28 +12,28 @@ public class RouteMasterServiceImpl implements IRouteMasterService <RouteMasterD
 	IRouteMasterDao<RouteMasterDTO> route = new RouteMasterDaoImpl();
 	
 	@Override
-	public void AddMstService(RouteMasterDTO dataObj) {
-		// TODO Auto-generated method stub
-		route.AddMaster(dataObj);
+	public int AddMstService(RouteMasterDTO dataObj) {
+		return route.AddMaster(dataObj);
 	}
 
 	@Override
-	public void ModifyMstService(RouteMasterDTO dataObj) {
+	public int ModifyMstService(RouteMasterDTO dataObj) {
 		// TODO Auto-generated method stub
 		
-		route.ModifyMaster(dataObj);
+		return route.ModifyMaster(dataObj);
 		
 	}
 
 	@Override
-	public void DeleteMStService(String code) {
+	public int DeleteMStService(String code) {
 		// TODO Auto-generated method stub
 		
-		route.DeleteMaster(code);
+		return route.DeleteMaster(code);
 	}
 
 	@Override
-	public void getInfo(String code) {
+	public List<RouteMasterDTO> getInfo(String code) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

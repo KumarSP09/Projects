@@ -1,5 +1,7 @@
 package com.ksp.service.impl;
 
+import java.util.List;
+
 import com.ksp.dao.ITransportMasterDao;
 import com.ksp.dao.impl.TransportMasterDaoImpl;
 import com.ksp.dto.TransportMasterDTO;
@@ -10,26 +12,24 @@ public class TransportMasterServiceImpl implements ITransportMasterService<Trans
 	ITransportMasterDao<TransportMasterDTO> transport = new TransportMasterDaoImpl();
 
 	@Override
-	public void AddMstService(TransportMasterDTO dataObj) {
-		// TODO Auto-generated method stub
-		transport.AddMaster(dataObj);
+	public int AddMstService(TransportMasterDTO dataObj) {
+		return transport.AddMaster(dataObj);
 	}
 
 	@Override
-	public void ModifyMstService(TransportMasterDTO dataObj) {
-		// TODO Auto-generated method stub
-		transport.ModifyMaster(dataObj);
+	public int ModifyMstService(TransportMasterDTO dataObj) {
+		return transport.ModifyMaster(dataObj);
 	}
 
 	@Override
-	public void DeleteMStService(String code) {
-		// TODO Auto-generated method stub
-		transport.DeleteMaster(code);
+	public int DeleteMStService(String code) {
+		return transport.DeleteMaster(code);
 		
 	}
 
 	@Override
-	public void getInfo(String code) {
+	public List<TransportMasterDTO> getInfo(String code) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

@@ -1,5 +1,7 @@
 package com.ksp.service.impl;
 
+import java.util.List;
+
 import com.ksp.dao.IFareMasterDao;
 import com.ksp.dao.impl.FareMasterDaoImpl;
 import com.ksp.dto.FareMasterDTO;
@@ -10,28 +12,28 @@ public class FareMasterServiceImpl implements IFareMasterService<FareMasterDTO>{
 	IFareMasterDao<FareMasterDTO> fares = new FareMasterDaoImpl();
 
 	@Override
-	public void AddMstService(FareMasterDTO dataObj) {
-		// TODO Auto-generated method stub
-		fares.AddMaster(dataObj);
+	public int AddMstService(FareMasterDTO dataObj) {
+		return fares.AddMaster(dataObj);
 		
 	}
 
 	@Override
-	public void ModifyMstService(FareMasterDTO dataObj) {
+	public int ModifyMstService(FareMasterDTO dataObj) {
 		// TODO Auto-generated method stub
 		
-		fares.ModifyMaster(dataObj);
+		return fares.ModifyMaster(dataObj);
 		
 	}
 
 	@Override
-	public void DeleteMStService(String code) {
+	public int DeleteMStService(String code) {
 		// TODO Auto-generated method stub
-		fares.DeleteMaster(code);
+		return fares.DeleteMaster(code);
 	}
 
 	@Override
-	public void getInfo(String code) {
+	public List<FareMasterDTO> getInfo(String code) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

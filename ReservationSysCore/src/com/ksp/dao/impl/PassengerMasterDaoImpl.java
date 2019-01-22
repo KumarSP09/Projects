@@ -91,13 +91,14 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return -1;
 		}
 		
 		return 1;
 	}
 
 	@Override
-	public void DeleteMaster(String Code) {
+	public int DeleteMaster(String Code) {
 		// TODO Auto-generated method stub
 		int paramIndex=1;
 		strsql = new StringBuilder();
@@ -114,7 +115,9 @@ public class PassengerMasterDaoImpl implements IPassengerMasterDao<PassengerMast
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return -1;
 		}
+		return 1;
 		
 		
 	}

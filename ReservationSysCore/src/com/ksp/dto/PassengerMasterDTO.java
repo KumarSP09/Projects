@@ -2,48 +2,48 @@ package com.ksp.dto;
 
 public class PassengerMasterDTO {
 
-	String PassengerCode;	
-	String PassengerName;
-	int PassengerAge;	
-	String PassengerGender; 
-	String PassengerContactNumber; 
-	String PassengerContactMail;
+	private String passengerCode;	
+	private String passengerName;
+	private int passengerAge;	
+	private String passengerGender; 
+	private String passengerContactNumber; 
+	private String passengerContactMail;
 	
 	public String getPassengerCode() {
-		return PassengerCode;
+		return passengerCode;
 	}
 	public void setPassengerCode(String passengerCode) {
-		PassengerCode = passengerCode;
+		this.passengerCode = passengerCode;
 	}
 	public String getPassengerName() {
-		return PassengerName;
+		return passengerName;
 	}
 	public void setPassengerName(String passengerName) {
-		PassengerName = passengerName;
+		this.passengerName = passengerName;
 	}
 	public int getPassengerAge() {
-		return PassengerAge;
+		return passengerAge;
 	}
 	public void setPassengerAge(int passengerAge) {
-		PassengerAge = passengerAge;
+		this.passengerAge = passengerAge;
 	}
 	public String getPassengerGender() {
-		return PassengerGender;
+		return passengerGender;
 	}
 	public void setPassengerGender(String passengerGender) {
-		PassengerGender = passengerGender;
+		this.passengerGender = passengerGender;
 	}
 	public String getPassengerContactNumber() {
-		return PassengerContactNumber;
+		return passengerContactNumber;
 	}
 	public void setPassengerContactNumber(String passengerContactNumber) {
-		PassengerContactNumber = passengerContactNumber;
+		this.passengerContactNumber = passengerContactNumber;
 	}
 	public String getPassengerContactMail() {
-		return PassengerContactMail;
+		return passengerContactMail;
 	}
 	public void setPassengerContactMail(String passengerContactMail) {
-		PassengerContactMail = passengerContactMail;
+		this.passengerContactMail = passengerContactMail;
 	}
 	
 	

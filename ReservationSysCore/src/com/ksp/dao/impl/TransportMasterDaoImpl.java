@@ -20,7 +20,8 @@ public class TransportMasterDaoImpl implements ITransportMasterDao<TransportMast
 	}
 
 	@Override
-	public void DeleteMaster(String Code) {
+	public int DeleteMaster(String Code) {
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
